@@ -40,15 +40,17 @@ var helpers = {
   }
 };
 
-test("it works", function testFunction() {
-  /* jshint evil: true */
-  var ast = preprocess('<div>{{#if working}}Hello {{firstName}} {{lastName}}!{{/if}}</div>');
-  var compiler = new TemplateCompiler();
-  var program = compiler.compile(ast);
-  var template = new Function("dom", "Placeholder", "return " + program)(dom, Placeholder);
-  var frag = template(
-    { working: true, firstName: 'Kris', lastName: 'Selden' },
-    { helpers: helpers }
-  );
-  equalHTML(frag, '<div>Hello Kris Selden!</div>');
-});
+
+//test("it works", function testFunction() {
+  //[> jshint evil: true <]
+  //var ast = preprocess('<div>{{#if working}}Hello {{firstName}} {{lastName}}!{{/if}}</div>');
+  //var compiler = new TemplateCompiler();
+  //var program = compiler.compile(ast);
+  //var template = new Function("dom", "Placeholder", "return " + program)(dom, Placeholder);
+  //var frag = template(
+    //{ working: true, firstName: 'Kris', lastName: 'Selden' },
+    //{ helpers: helpers }
+  //);
+  //equalHTML(frag, '<div>Hello Kris Selden!</div>');
+//});
+//
